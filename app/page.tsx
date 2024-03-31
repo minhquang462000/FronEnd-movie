@@ -1,113 +1,63 @@
-import Image from "next/image";
+'use client'
+import ListCardMain from "@/components/List/ListCardMain";
+import SliderMain from "@/components/slides/SliderMain";
+import React, { useCallback, useState } from "react";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+  const [showAllSection, setShowAllSection] = useState(false)
+  const [tabIndex, setTadIndex] = useState<number>(0);
+
+  const renderByTab = useCallback(() => {
+    switch (tabIndex) {
+      case 0:
+        return <div className="py-4">
+          <h1 className="text-xl font-bold bg-gradient-to-r  from-orange-500 to-red-600 bg-clip-text text-transparent">MỚI CẬP NHẬT</h1>
+          <div className="h-[1.5px] w-[150px] mt-1  bg-gradient-to-r from-orange-500 to-red-600 "></div>
+          <ListCardMain />
+          <tr className="flex items-center justify-center font-bold text-sm my-8 gap-2">
+            <td className="bg-[#396792] hover:bg-[#4c87be]  h-8 w-12 flex justify-center items-center rounded-md"><IoIosArrowBack size={20} /></td>
+            <td className="bg-[#396792] hover:bg-[#4c87be]  h-8 w-10 flex justify-center items-center rounded-md">1</td>
+            <td className="bg-[#396792] hover:bg-[#4c87be] h-8 w-12 flex justify-center items-center rounded-md"><IoIosArrowForward size={20} /></td>
+          </tr>
         </div>
+      case 1:
+        return <ListCardMain />
+      case 2:
+        return <ListCardMain />
+      case 3:
+        return <ListCardMain />
+      case 4:
+        return <ListCardMain />
+      case 5:
+        return <ListCardMain />
+      case 6:
+        return <ListCardMain />
+      case 7:
+        return <ListCardMain />
+      default:
+        return null;
+    }
+  }, [tabIndex]);
+  return (
+    <main className="flex text-white min-h-screen bg-[#212c37] flex-col  ">
+      <div className="w-screen  lg:w-[1140px] h-max  flex flex-col p-4 bg-[#17222c]  mx-auto ">
+        <SliderMain />
+        <ul className={`grid text-center gap-1 py-4 lg:grid-cols-8 w-full lg:text-lg text-xs grid-cols-2 lg:h-full overflow-hidden ${!showAllSection ? 'h-[52px]' : 'h-full'}`}>
+          <li onClick={() => setTadIndex(0)} className={`py-2 lg:py-1 bg-[#23232a] lg:leading-6 cursor-pointer hover:bg-[#343434]  lg:px-8 text-wrap rounded-md ${tabIndex == 0 && "bg-gradient-to-r   from-[#31375a] to-[#00cefc]"}`}>Mới Cập Nhật</li>
+          <li onClick={() => setShowAllSection(!showAllSection)} className="py-2 bg-[#343434] lg:leading-6 cursor-pointer  lg:hidden rounded-md">Lịch Chiếu</li>
+          <li onClick={() => setTadIndex(1)} className={`py-2 lg:py-1 bg-[#23232a] lg:leading-6 cursor-pointer hover:bg-[#343434] rounded-md ${tabIndex == 1 && "bg-gradient-to-r   from-[#31375a] to-[#00cefc]"}`}><p className="font-bold hidden lg:block">Mon</p><p>Thứ Hai</p></li>
+          <li onClick={() => setTadIndex(2)} className={`py-2 lg:py-1 bg-[#23232a] lg:leading-6 cursor-pointer hover:bg-[#343434] rounded-md ${tabIndex == 2 && "bg-gradient-to-r   from-[#31375a] to-[#00cefc]"}`}><p className="font-bold hidden lg:block">Tue</p><p>Thứ Ba</p></li>
+          <li onClick={() => setTadIndex(3)} className={`py-2 lg:py-1 bg-[#23232a] lg:leading-6 cursor-pointer hover:bg-[#343434] rounded-md ${tabIndex == 3 && "bg-gradient-to-r   from-[#31375a] to-[#00cefc]"}`}><p className="font-bold hidden lg:block">Wed</p><p>Thứ Tư</p></li>
+          <li onClick={() => setTadIndex(4)} className={`py-2 lg:py-1 bg-[#23232a] lg:leading-6 cursor-pointer hover:bg-[#343434] rounded-md ${tabIndex == 4 && "bg-gradient-to-r   from-[#31375a] to-[#00cefc]"}`}><p className="font-bold hidden lg:block">Thu</p><p>Thứ Năm</p></li>
+          <li onClick={() => setTadIndex(5)} className={`py-2 lg:py-1 bg-[#23232a] lg:leading-6 cursor-pointer hover:bg-[#343434] rounded-md ${tabIndex == 5 && "bg-gradient-to-r   from-[#31375a] to-[#00cefc]"}`}><p className="font-bold hidden lg:block">Fri</p><p>Thứ Sáu</p></li>
+          <li onClick={() => setTadIndex(6)} className={`py-2 lg:py-1 bg-[#23232a] lg:leading-6 cursor-pointer hover:bg-[#343434] rounded-md ${tabIndex == 6 && "bg-gradient-to-r   from-[#31375a] to-[#00cefc]"}`}><p className="font-bold hidden lg:block">Sat</p><p>Thứ Bảy</p></li>
+          <li onClick={() => setTadIndex(7)} className={`py-2 lg:py-1 bg-[#23232a] lg:leading-6 cursor-pointer hover:bg-[#343434] rounded-md ${tabIndex == 7 && "bg-gradient-to-r   from-[#31375a] to-[#00cefc]"}`}><p className="font-bold hidden lg:block">Sun</p><p>Chủ Nhật</p></li>
+        </ul>
+        {renderByTab()}
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
   );
 }
