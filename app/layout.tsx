@@ -19,16 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="bg-[#212c37] " lang="en">
-        
+    <html className="flex text-white bg-[#212c37] flex-col  " lang="en">
       <body className={inter.className}>
-        <HeaderMobile />
-        <HeaderSelect />
-        <main>{children}</main>
-        
-        <FooterMain/>
+        {children}
       </body>
-
     </html>
   );
 }
