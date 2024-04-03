@@ -18,6 +18,7 @@ import CardVideo from "@/components/Cards/CardVideo";
 import CardError from "@/components/Cards/CardError";
 import { useState } from "react";
 import MainLayout from "@/layouts/main";
+import ListRelateMovie from "@/components/List/ListRelateMOvie";
 export default function page() {
   const [showFormError, setShowFormError] = useState<boolean>(false);
   return (
@@ -138,6 +139,7 @@ export default function page() {
           {" "}
           <ListComments />
         </div>
+        <ListRelateMovie/>
       </main>
     </MainLayout>
   );

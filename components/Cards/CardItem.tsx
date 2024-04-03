@@ -3,7 +3,7 @@ import { FaRegCalendarCheck, FaStar } from "react-icons/fa6";
 
 export function CardItem() {
   return (
-    <nav className=" grid grid-cols-3 lg:grid-cols-4 bg-[#0f171e] px-2 items-center text-gray-300 gap-3">
+    <nav className=" grid grid-cols-3 lg:grid-cols-4 bg-[#0f171e] cursor-pointer px-2 items-center text-gray-300 gap-3">
       <div className="col-span-1 w-full md:w-[180px] m-auto md:h-[250px] lg:w-[230px] lg:h-[330px] border-[6px] overflow-hidden border-black h-[150px]">
         <img
           className="w-full h-full object-cover"

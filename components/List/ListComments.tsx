@@ -1,5 +1,4 @@
 import React, { useCallback } from "react";
-import { IoMdArrowDropdown } from "react-icons/io";
 
 import CardComment from "../Cards/CardComment";
 import { RiArrowDownSFill } from "react-icons/ri";
@@ -11,12 +10,14 @@ export default function ListComments() {
     if (filterComments == 0) {
       return (
         <td className="flex flex-col gap-2 ">
+          {/* Mới nhất */}
           <CardComment />
         </td>
       );
     } else {
       return (
         <td className="flex flex-col gap-2 ">
+          {/* Cũ nhất */}
           <CardComment />
         </td>
       );
