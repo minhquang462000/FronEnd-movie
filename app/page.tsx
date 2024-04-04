@@ -32,7 +32,7 @@ export default function Home() {
   }, [tabIndex]);
   return (
     <MainLayout>
-      <div className="w-screen mb-5 rounded-b-lg  lg:w-[1140px] h-max  flex flex-col p-4 bg-[#17222c]  mx-auto ">
+      <div className="w-screen mb-5 rounded-b-lg  lg:w-[1140px] h-max  flex flex-col p-4 bg-[#151d25]  mx-auto ">
         <SliderMain />
         <ul
           className={`grid text-center gap-1 py-4 lg:grid-cols-8 w-full lg:text-lg text-xs grid-cols-2 lg:h-full overflow-hidden ${

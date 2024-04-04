@@ -1,7 +1,7 @@
 import * as React from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-export interface IAppProps {}
+export interface IAppProps { }
 
 export default function ChangePage(props: IAppProps) {
   return (
@@ -9,7 +9,8 @@ export default function ChangePage(props: IAppProps) {
       <td className="bg-[#396792] hover:bg-[#4c87be]  cursor-pointer h-8 w-12 flex justify-center items-center rounded-md">
         <IoIosArrowBack size={20} />
       </td>
-      <td className="bg-[#396792] hover:bg-[#4c87be] cursor-pointer  h-8 w-10 flex justify-center items-center rounded-md">
+      <td className="bg-[#396792] hover:bg-[#4c87be] cursor-pointer
+        h-8 w-10 flex justify-center items-center rounded-md">
         1
       </td>
       <td className="bg-[#396792] hover:bg-[#4c87be] cursor-pointer h-8 w-12 flex justify-center items-center rounded-md">

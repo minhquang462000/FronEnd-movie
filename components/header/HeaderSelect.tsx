@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import * as React from "react";
-import { useTranslation } from "react-i18next";
 import { AiOutlineLike } from "react-icons/ai";
 import { BiCameraMovie, BiMoviePlay } from "react-icons/bi";
 import { IoIosSearch, IoMdArrowDropdown } from "react-icons/io";
@@ -14,9 +14,9 @@ export default function HeaderSelect() {
   const [showSelect, setShowSelect] = React.useState<boolean>(false);
   const [showCategories, setShowcategories] = React.useState<boolean>(false);
   const [showSearch, setShowSearch] = React.useState<boolean>(false);
-  const { t, i18n } = useTranslation("header");
+  const pathName = usePathname()
   return (
-    <div className="text-white w-full sticky   z-50  top-0  bg-[#12171b]">
+    <div className="text-white w-full sticky shadow-md shadow-black  z-50  top-0  bg-[#12171b]">
       <nav className="flex justify-between items-center lg:hidden">
         <button
           onClick={() => setShowSelect(!showSelect)}
@@ -31,14 +31,13 @@ export default function HeaderSelect() {
         </button>
       </nav>
       <ul
-        className={`font-light border-t-[1px] border-gray-600 text-gray-300 lg:w-[1140px]  lg:flex items-center m-auto lg:border-none text-xs lg:text-sm lg:font-medium   w-screen  bg-[#12171b]  ${
-          !showSelect && "hidden"
-        }`}
+        className={`font-light border-t-[1px] border-gray-600 text-gray-300 lg:w-[1140px]  lg:flex items-center m-auto lg:border-none text-xs lg:text-sm lg:font-medium   w-screen  bg-[#12171b]  ${!showSelect && "hidden"
+          }`}
       >
         <Link href={"/"}>
-          <li className="flex items-center gap-1 cursor-pointer hover:text-yellow-500 px-3 hover:bg-black py-3">
+          <li className={`flex items-center gap-1 cursor-pointer   p-3 ${pathName === "/" ? "hover:bg-[#1b2d3c]" : "hover:text-yellow-500 px-3 hover:bg-black"}`}>
             <IoHomeOutline />
-            <p> {t("home")}</p>
+            <p> Trang Chủ</p>
           </li>
         </Link>
         <li className="flex flex-col lg:relative group cursor-pointer  gap-1 hover:text-yellow-500  hover:bg-black ">
@@ -46,14 +45,13 @@ export default function HeaderSelect() {
             onClick={() => setShowcategories(!showCategories)}
             className="flex gap-1 p-3  items-center"
           >
-            <p>{t("categories")}</p>
+            <p>Thể Loại</p>
             <IoMdArrowDropdown />
           </span>
           <span className="w-5 h-5 top-9 hidden lg:group-hover:block absolute rotate-45 right-2 bg-[#213342]" />
           <ul
-            className={`text-white lg:group-hover:block lg:absolute z-50 lg:top-10 lg:w-max  text-xs lg:text-sm  bg-[#213342] w-screen ${
-              !showCategories && "hidden"
-            }`}
+            className={`text-white lg:group-hover:block lg:absolute z-50 lg:top-10 lg:w-max  text-xs lg:text-sm  bg-[#213342] w-screen ${!showCategories && "hidden"
+              }`}
           >
             <Link href={"/the-loai"}>
               <li className="px-8 py-2 cursor-pointer hover:text-[#26b9fe]">
@@ -85,46 +83,45 @@ export default function HeaderSelect() {
         </li>
         <li className="flex items-center gap-1 cursor-pointer hover:text-yellow-500 px-3 hover:bg-black py-3">
           <RiMovie2Line />
-          <p> {t("singleMovie")}</p>
+          <p> Phim lẻ</p>
         </li>
         <li className="flex items-center gap-1 cursor-pointer hover:text-yellow-500 px-3 hover:bg-black py-3">
           <BiMoviePlay />
-          <p> {t("movieShowing")}</p>
+          <p> Đang Chiếu</p>
         </li>
         <Link
           href="/lich-chieu"
           className="flex items-center gap-1 cursor-pointer hover:text-yellow-500 px-3 hover:bg-black py-3"
         >
           <MdMovieEdit />
-          <p> {t("showTimes")}</p>
+          <p> Lịch Chiếu</p>
         </Link>
         <li className="flex items-center gap-1 cursor-pointer hover:text-yellow-500 px-3 hover:bg-black py-3">
           <BiCameraMovie />
-          <p>{t("complated")}</p>
+          <p>Hoàn Thành</p>
         </li>
         <li className="flex items-center gap-1 cursor-pointer hover:text-yellow-500 px-3 hover:bg-black py-3">
           <MdOutlineMovieCreation />
-          <p> {t("comingSoon")}</p>
+          <p>Sắp Chiếu</p>
         </li>
         <li className="flex items-center gap-1 cursor-pointer hover:text-yellow-500 px-3 hover:bg-black py-3">
           <SiThemoviedatabase />
-          <p>{t("top")}</p>
+          <p>Top 10 HH3D</p>
         </li>
         <li className="flex items-center gap-1 cursor-pointer hover:text-yellow-500 px-3 hover:bg-black py-3">
           <AiOutlineLike />
-          <p> {t("liked")}</p>
+          <p> Đáng Xem</p>
         </li>
       </ul>
       <section
-        className={`p-3 border-t-[1px] border-gray-600 bg-[#212c37] ${
-          !showSearch && "hidden"
-        }`}
+        className={`p-3 border-t-[1px] border-gray-600 bg-[#212c37] ${!showSearch && "hidden"
+          }`}
       >
         <span className=" lg:hidden flex border rounded-2xl border-gray-600 gap-2 items-center h-max  py-1 px-4    bg-[#12171b]">
           <IoIosSearch size={20} />
           <input
             className="outline-none bg-transparent"
-            placeholder={t("search")}
+            placeholder="Tìm kiếm..."
             type="text"
           />
         </span>

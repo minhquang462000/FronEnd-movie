@@ -26,7 +26,7 @@ export default function page(props: IAppProps) {
   }, [pathName]);
   return (
     <MainLayout>
-      <main className="lg:w-[1140px] py-4 mb-5 rounded-b-lg bg-[#17222c] px-4 h-max m-auto">
+      <main className="lg:w-[1140px] py-4 mb-5 rounded-b-lg bg-[#151d25] px-4 h-max m-auto">
         {renderByTab()}
         <ChangePage />
       </main>

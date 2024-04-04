@@ -7,15 +7,16 @@ import ChangePage from "../ChangePage/ChangePage";
 export default function ListHistory() {
   return (
     <main className="w-full">
-      <div className="border-b-[1px] lg:px-2 flex justify-between items-center pb-1 -mb-[1.55px]  border-gray-800">
-        <h1 className="text-ld font-bold bg-gradient-to-r   from-orange-500 to-red-600 bg-clip-text text-transparent">
+      <div className="border-b-[1px]  flex justify-between items-center pb-1 -mb-[1.55px]  border-gray-800">
+        <h1 className=" font-bold bg-gradient-to-r   from-orange-500 to-red-600 bg-clip-text text-transparent">
           Lịch Sử Xem
         </h1>
         <p className="text-xs text-red-400 cursor-pointer hover:text-orange-400 font-light">
-          Xoá tất cả lịch sử xem
+          Xoá tất cả lịch sử 
         </p>
       </div>
-      <div className="h-[2px] w-[125px]   bg-gradient-to-r from-orange-500 shadow to-red-600 "></div>
+      <div className="h-[2px] w-[100px]   bg-gradient-to-r from-orange-500 shadow to-red-600 "></div>
+      <nav className="bg-[#F2DEDE] leading-5 text-[#aa4644] rounded my-4 p-4 text-xs"><span className="text-[#a94442] text-sm font-bold">Chú ý:</span> Bạn cần <span className="font-bold text-sm cursor-pointer hover:text-[#23527c] mx-1 text-[#38c0ff]">Đăng Nhập</span> tài khoản để có thể lưu lịch sử xem phim vào tài khoản của bạn, nếu không lịch sử này sẽ mất khi bạn xóa lịch sử trình duyệt !!!</nav>
       <ul className="grid grid-cols-1 bg-[#0f171e] my-4 p-3 rounded md:grid-cols-2  gap-x-8 gap-y-3">
         <li className="w-full shadow-md shadow-black border  border-black flex items-center group/item relative cursor-pointer  bg-[#19242e] h-[80px] lg:h-[100px]   rounded-md ">
           <img
@@ -38,6 +39,7 @@ export default function ListHistory() {
           />
         </li>
       </ul>
+     
     </main>
   );
 }

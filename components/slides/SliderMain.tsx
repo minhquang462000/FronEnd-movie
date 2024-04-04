@@ -85,7 +85,7 @@ export default function SliderMain() {
     dots: true,
     infinite: true,
     slidesToShow: 2,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     arrows: true,
     responsive: [
       {
@@ -97,8 +97,8 @@ export default function SliderMain() {
         },
       },
     ],
-    // autoplay: true,
-    // autoplaySpeed: 3000,
+    autoplay: true,
+    autoplaySpeed: 3000,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
@@ -116,7 +116,7 @@ export default function SliderMain() {
               src={item.urlImg}
               alt=""
             />
-            <span className="absolute bottom-0 left-0 text-white w-full py-1 px-2 bg-[#21212198]">
+            <span className="absolute bottom-0 left-0 text-white flex flex-col lg:gap-1 w-full px-4  p-2 bg-[#21212198]">
               <p className="lg:text-2xl text-xl py-1 lg:py-0">
                 {item.nameMovie}
               </p>
