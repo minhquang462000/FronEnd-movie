@@ -14,7 +14,7 @@ import MainLayout from "@/layouts/main";
 export default function page() {
   return (
     <MainLayout>
-      <main className=" w-screen text-gray-300 h-max bg-[#151d25] lg:w-[1140px] px-5 mx-auto">
+      <main className="py-4 mb-5 rounded-b-lg w-screen text-gray-300 h-max bg-[#151d25] lg:w-[1140px] px-5 mx-auto">
         <CardItem />
 
         <div className="bg-[#0f171e] text-white font-medium flex justify-between my-2 text-sm rounded-md p-3">

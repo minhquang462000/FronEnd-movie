@@ -54,13 +54,11 @@ export default function ListComments() {
         </div>
 
         {renderListComments()}
-        <div className="w-full flex  justify-center py-4">
-          <button className="bg-[#07b290] px-4 lg:py-2 lg:px-6 font-medium shadow-md hover:shadow-none cursor-pointer text-white py-1 rounded-sm  w-max ">
-            {" "}
-            Tải thêm bình luận
-          </button>
-        </div>
       </div>
+      <button className="bg-[#07b290] my-4 px-4 hover:shadow-black shadow-md  shadow-cyan-500/50 flex lg:py-2 lg:px-6 font-medium  hover:drop-shadow-none cursor-pointer text-white py-1 rounded-md  m-auto ">
+        {" "}
+        Tải thêm bình luận
+      </button>
     </main>
   );
 }

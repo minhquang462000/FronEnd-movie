@@ -23,17 +23,19 @@ export default function page() {
   const [showFormError, setShowFormError] = useState<boolean>(false);
   return (
     <MainLayout>
-      <main className="w-screen text-gray-300 h-max  bg-[#151d25] lg:w-[1140px] px-3  lg:px-5 mx-auto">
-        <nav className={`fixed top-5  lg:top-10 z-50 left-0 right-0 lg:left-[20%] lg:right-[20%] ${!showFormError && "hidden"}`}>
+      <main className="w-screen shadow-sm text-gray-300 h-max py-4 mb-5 rounded-b-lg  bg-[#151d25] lg:w-[1140px] px-3  lg:px-5 mx-auto">
+        <nav
+          className={`fixed top-5  lg:top-10 z-50 left-0 right-0 lg:left-[20%] lg:right-[20%] ${
+            !showFormError && "hidden"
+          }`}
+        >
           {" "}
           <CardError
             showFormError={showFormError}
             setShowFormError={setShowFormError}
           />
         </nav>
-        <div className="py-2">
-          <CardVideo />
-        </div>
+        <CardVideo />
         <ul className="flex justify-center items-center text-xs lg:text-sm pt-2  gap-2 lg:gap-3 ">
           <li className="bg-[#25354c] flex items-center gap-1  cursor-pointer rounded hover:bg-gray-500  lg:py-1  py-[2px] px-1 lg:px-3">
             <MdKeyboardDoubleArrowLeft className="lg:text-xl" />
@@ -43,7 +45,10 @@ export default function page() {
             <p>Tập tiếp theo</p>
             <MdKeyboardDoubleArrowRight className="lg:text-xl" />
           </li>
-          <li onClick={() => setShowFormError(!showFormError)} className="bg-[#25354c] flex items-center gap-1 cursor-pointer  rounded hover:bg-gray-500 lg:py-1  py-[2px] px-1 lg:px-3">
+          <li
+            onClick={() => setShowFormError(!showFormError)}
+            className="bg-[#25354c] flex items-center gap-1 cursor-pointer  rounded hover:bg-gray-500 lg:py-1  py-[2px] px-1 lg:px-3"
+          >
             <MdRunningWithErrors className="lg:text-xl" />
             <p>Báo lỗi</p>
           </li>
@@ -118,7 +123,11 @@ export default function page() {
             alt=""
           />
           <span className="flex w-full items-center gap-2 absolute top-0 left-0 p-2 text-white">
-            <img src={imgLogoAvt.src} alt="" className="border-2 border-white" />
+            <img
+              src={imgLogoAvt.src}
+              alt=""
+              className="border-2 border-white"
+            />
             <span>
               <h3 className=" cursor-pointer hover:underline text-lg">
                 Hoạt Hình Trung Quốc
@@ -139,7 +148,7 @@ export default function page() {
           {" "}
           <ListComments />
         </div>
-        <ListRelateMovie/>
+        <ListRelateMovie />
       </main>
     </MainLayout>
   );

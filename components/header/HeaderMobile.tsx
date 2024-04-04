@@ -15,24 +15,24 @@ export default function HeaderMobile() {
           {/* <img src="https://picsum.photos/200" alt="" /> */}
           HoatHinhOnline
         </Link>
-        <section className="hidden lg:flex text-xs lg:text-base lg:py-2 gap-2 items-center h-max w-[400px] py-1 px-4 rounded-2xl  bg-[#12171b]">
+        <section className="hidden lg:flex text-xs lg:text-base p-[6px] gap-2 items-center h-max w-[400px]  px-4 rounded-2xl  bg-[#12171b]">
           <IoSearch size={20} />
           <input
-            className="outline-none bg-transparent"
+            className="outline-none text-sm bg-transparent"
             placeholder="Tìm kiếm ..."
             type="text"
           />
         </section>
         <ul className="flex gap-2 justify-center pt-3 items-center lg:col-span-1 ">
-          <li className="border-[0.1px] bg-[#12171b] border-gray-500 px-4 py-2 cursor-pointer ">
+          <Link href={"/lich-su"} className="border-[0.1px] bg-[#12171b] border-gray-500 px-4 py-2 cursor-pointer ">
             <RxCountdownTimer size={20} />
-          </li>
-          <li className="border-[0.1px] bg-[#12171b] border-gray-500 px-4 py-2 cursor-pointer ">
+          </Link>
+          <Link href={"/theo-doi"} className="border-[0.1px] bg-[#12171b] border-gray-500 px-4 py-2 cursor-pointer ">
             <BsFillBookmarksFill size={20} />
-          </li>
-          <li className="border-[0.1px] bg-[#12171b] border-gray-500 px-4 py-2 cursor-pointer ">
+          </Link>
+          <Link href={"/bang-xep-hang"} className="border-[0.1px] bg-[#12171b] border-gray-500 px-4 py-2 cursor-pointer ">
             <MdStars size={20} />
-          </li>
+          </Link>
           <Link href={"/auth/login"} className="border-[0.1px] bg-[#12171b] border-gray-500 px-4 py-2 cursor-pointer ">
             <LuLogOut size={20} />
           </Link>

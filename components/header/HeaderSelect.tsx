@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import * as React from "react";
 import { useTranslation } from "react-i18next";
 import { AiOutlineLike } from "react-icons/ai";
@@ -15,7 +16,7 @@ export default function HeaderSelect() {
   const [showSearch, setShowSearch] = React.useState<boolean>(false);
   const { t, i18n } = useTranslation("header");
   return (
-    <div className="text-white w-full sticky py-1  z-50  top-0  bg-[#12171b]">
+    <div className="text-white w-full sticky   z-50  top-0  bg-[#12171b]">
       <nav className="flex justify-between items-center lg:hidden">
         <button
           onClick={() => setShowSelect(!showSelect)}
@@ -34,10 +35,12 @@ export default function HeaderSelect() {
           !showSelect && "hidden"
         }`}
       >
-        <li className="flex items-center gap-1 cursor-pointer hover:text-yellow-500 px-3 hover:bg-black py-3">
-          <IoHomeOutline />
-          <p> {t("home")}</p>
-        </li>
+        <Link href={"/"}>
+          <li className="flex items-center gap-1 cursor-pointer hover:text-yellow-500 px-3 hover:bg-black py-3">
+            <IoHomeOutline />
+            <p> {t("home")}</p>
+          </li>
+        </Link>
         <li className="flex flex-col lg:relative group cursor-pointer  gap-1 hover:text-yellow-500  hover:bg-black ">
           <span
             onClick={() => setShowcategories(!showCategories)}
@@ -52,9 +55,11 @@ export default function HeaderSelect() {
               !showCategories && "hidden"
             }`}
           >
-            <li className="px-8 py-2 cursor-pointer hover:text-[#26b9fe]">
-              Huyễn Huyền
-            </li>
+            <Link href={"/the-loai"}>
+              <li className="px-8 py-2 cursor-pointer hover:text-[#26b9fe]">
+                Huyễn Huyền
+              </li>
+            </Link>
             <li className="px-8 py-2 cursor-pointer hover:text-[#26b9fe]">
               Xuyên Không
             </li>
@@ -86,10 +91,13 @@ export default function HeaderSelect() {
           <BiMoviePlay />
           <p> {t("movieShowing")}</p>
         </li>
-        <li className="flex items-center gap-1 cursor-pointer hover:text-yellow-500 px-3 hover:bg-black py-3">
+        <Link
+          href="/lich-chieu"
+          className="flex items-center gap-1 cursor-pointer hover:text-yellow-500 px-3 hover:bg-black py-3"
+        >
           <MdMovieEdit />
           <p> {t("showTimes")}</p>
-        </li>
+        </Link>
         <li className="flex items-center gap-1 cursor-pointer hover:text-yellow-500 px-3 hover:bg-black py-3">
           <BiCameraMovie />
           <p>{t("complated")}</p>
