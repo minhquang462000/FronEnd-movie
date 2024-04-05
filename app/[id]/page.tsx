@@ -16,8 +16,6 @@ export default function page(props: IAppProps) {
     switch (pathName) {
       case "/lich-su":
         return <ListHistory />;
-      case "/bang-xep-hang":
-        return <UserRankings />;
       case "/theo-doi":
         return <ListFollow />;
       default:
