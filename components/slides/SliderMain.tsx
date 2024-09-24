@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import "./slide.css";
+import Image from "next/image";
 
 const listImg = [
   {
@@ -111,7 +112,7 @@ export default function SliderMain() {
             key={index}
             className="w-full  lg:h-[300px]  h-[200px] text-sm  relative overflow-hidden"
           >
-            <img
+            <Image
               className="w-full h-full object-cover"
               src={item.urlImg}
               alt=""

@@ -1,5 +1,6 @@
 import * as React from "react";
 import bgimg from "@/public/images/tong-mon.gif";
+import Image from "next/image";
 export interface IAppProps {}
 
 export default function UserRankings(props: IAppProps) {
@@ -19,7 +20,7 @@ export default function UserRankings(props: IAppProps) {
             </div>
           </div>
           <div className="w-[55%] flex justify-start lg:gap-5 gap-2  items-center ">
-            <img
+            <Image
               className="lg:w-[100px] lg:h-[100px] w-[45px] h-[45px]  rounded-full cursor-pointer"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAcSorIMehvnczKwhBBzl7pRyiT3i65iAQZQDw4pfHvw&s"
               alt=""
