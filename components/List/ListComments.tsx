@@ -1,5 +1,5 @@
+'use client';
 import React, { useCallback } from "react";
-
 import CardComment from "../Cards/CardComment";
 import { RiArrowDownSFill } from "react-icons/ri";
 import { TbHandClick } from "react-icons/tb";
@@ -36,7 +36,7 @@ export default function ListComments() {
             <div className="w-14 h-14 lg:w-[80px] lg:h-[80px] mx-auto bg-gray-500 border-2 lg:border-4 rounded-full border-white">
               <img
                 className=" w-full h-full rounded-full object-cover"
-                src="https://hoathinh3d.io/wp-content/uploads/2021/09/nghich-thien-chi-ton-300x450.jpg"
+                src=""
                 alt=""
               />
             </div>

@@ -13,7 +13,7 @@ export default function CardComment() {
       <span className="flex gap-2 lg:my-5 lg:flex-col lg:w-[10%] lg:items-center items-end">
         <img
           className="w-10 h-10 lg:w-16 lg:h-16 bg-gray-500 rounded-full object-cover"
-          src="https://i.pinimg.com/originals/7f/10/f3/7f10f39e54aad282f4d3d35a7537b4d3.gif"
+          src=""
           alt=""
         />
         <p className="font-bold bg-gradient-to-r text-white px-3 w-[100px] lg:w-full py-[2px] truncate text-xs rounded-lg from-orange-500 to-red-600">

@@ -1,4 +1,3 @@
-"use client";
 
 import FindFast from "@/components/Cards/FindFast";
 import Showtime from "@/components/Cards/Showtime";
@@ -19,40 +18,13 @@ import CardError from "@/components/Cards/CardError";
 import { useState } from "react";
 import MainLayout from "@/layouts/main";
 import ListRelateMovie from "@/components/List/ListRelateMOvie";
+import DialogErrorConfirm from "@/components/DialogErrorConfirm";
 export default function page() {
-  const [showFormError, setShowFormError] = useState<boolean>(false);
   return (
     <MainLayout>
       <main className="w-screen shadow-sm text-gray-300 h-max py-4 mb-5 rounded-b-lg  bg-[#151d25] lg:w-[1140px] px-3  lg:px-5 mx-auto">
-        <nav
-          className={`fixed top-5  lg:top-10 z-50 left-0 right-0 lg:left-[20%] lg:right-[20%] ${
-            !showFormError && "hidden"
-          }`}
-        >
-          {" "}
-          <CardError
-            showFormError={showFormError}
-            setShowFormError={setShowFormError}
-          />
-        </nav>
         <CardVideo />
-        <ul className="flex justify-center items-center text-xs lg:text-sm pt-2  gap-2 lg:gap-3 ">
-          <li className="bg-[#25354c] flex items-center gap-1  cursor-pointer rounded hover:bg-gray-500  lg:py-1  py-[2px] px-1 lg:px-3">
-            <MdKeyboardDoubleArrowLeft className="lg:text-xl" />
-            <p>Tập trước</p>
-          </li>
-          <li className="bg-[#25354c] flex items-center gap-[2px]  cursor-pointer rounded hover:bg-gray-500  lg:py-1 py-[2px] px-1 lg:px-3">
-            <p>Tập tiếp theo</p>
-            <MdKeyboardDoubleArrowRight className="lg:text-xl" />
-          </li>
-          <li
-            onClick={() => setShowFormError(!showFormError)}
-            className="bg-[#25354c] flex items-center gap-1 cursor-pointer  rounded hover:bg-gray-500 lg:py-1  py-[2px] px-1 lg:px-3"
-          >
-            <MdRunningWithErrors className="lg:text-xl" />
-            <p>Báo lỗi</p>
-          </li>
-        </ul>
+        <DialogErrorConfirm />
         <ul className="flex items-center gap-2 text-white text-[10px] lg:text-sm lg:py-3 py-2 ">
           <li className="flex px-2 py-[2px] rounded-sm  cursor-pointer bg-[#1877f2] items-center gap-1">
             <FaThumbsUp size={13} />

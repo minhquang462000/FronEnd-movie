@@ -21,7 +21,7 @@ export default function ListHistory() {
         <li className="w-full shadow-md shadow-black border  border-black flex items-center group/item relative cursor-pointer  bg-[#19242e] h-[80px] lg:h-[100px]   rounded-md ">
           <img
             className="w-1/3 lg:w-1/5 scale-105 shadow shadow-slate-600 rounded mr-2 h-full  border-[#0f171e] object-cover"
-            src="https://hoathinh3d.io/wp-content/uploads/2024/02/IMG_0349-300x450.jpeg"
+            src=""
             alt=""
           />
           <span className=" pl-2 w-2/3 lg:w-4/5 flex gap-1 flex-col ">

@@ -9,9 +9,12 @@ import { RxCountdownTimer } from "react-icons/rx";
 
 export default function HeaderMobile() {
   return (
-    <header className="lg:w-[1140px] w-screen   mx-auto pt-5 px-4 text-white  ">
+    <header className=" lg:w-[1140px] w-full   mx-auto pt-5 px-4 text-white  ">
       <div className="lg:flex  lg:justify-between pt-5 items-center w-full">
-        <Link href={"/"} className="text-3xl  font-extrabold lg:w-max flex w-full justify-center bg-gradient-to-r mx-auto lg:m-0 lg:col-span-2 from-red-600 to-orange-500 bg-clip-text text-transparent">
+        <Link
+          href={"/"}
+          className="text-3xl  font-extrabold lg:w-max flex w-full justify-center bg-gradient-to-r mx-auto lg:m-0 lg:col-span-2 from-red-600 to-orange-500 bg-clip-text text-transparent"
+        >
           {/* <img src="https://picsum.photos/200" alt="" /> */}
           HoatHinhOnline
         </Link>
@@ -24,16 +27,28 @@ export default function HeaderMobile() {
           />
         </section>
         <ul className="flex gap-2 justify-center pt-3 items-center lg:col-span-1 ">
-          <Link href={"/lich-su"} className="border-[0.1px] bg-[#12171b] border-gray-500 px-4 py-2 cursor-pointer ">
+          <Link
+            href={"/lich-su"}
+            className="border-[0.1px] bg-[#12171b] border-gray-500 px-4 py-2 cursor-pointer "
+          >
             <RxCountdownTimer size={20} />
           </Link>
-          <Link href={"/theo-doi"} className="border-[0.1px] bg-[#12171b] border-gray-500 px-4 py-2 cursor-pointer ">
+          <Link
+            href={"/theo-doi"}
+            className="border-[0.1px] bg-[#12171b] border-gray-500 px-4 py-2 cursor-pointer "
+          >
             <BsFillBookmarksFill size={20} />
           </Link>
-          <Link href={"/bang-xep-hang"} className="border-[0.1px] bg-[#12171b] border-gray-500 px-4 py-2 cursor-pointer ">
+          <Link
+            href={"/bang-xep-hang"}
+            className="border-[0.1px] bg-[#12171b] border-gray-500 px-4 py-2 cursor-pointer "
+          >
             <MdStars size={20} />
           </Link>
-          <Link href={"/auth/login"} className="border-[0.1px] bg-[#12171b] border-gray-500 px-4 py-2 cursor-pointer ">
+          <Link
+            href={"/auth/login"}
+            className="border-[0.1px] bg-[#12171b] border-gray-500 px-4 py-2 cursor-pointer "
+          >
             <LuLogOut size={20} />
           </Link>
         </ul>

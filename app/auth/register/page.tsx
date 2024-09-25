@@ -18,10 +18,10 @@ export default function App(props: IAppProps) {
       style={{ backgroundImage: `url(${bgImagaLogin.src})` }}
     >
       <div className="lg:w-max w-[90%] py-10  h-max m-auto">
-        <h1 className="text-[40px] text-center  font-extrabold w-full bg-gradient-to-r mx-auto lg:m-0 lg:col-span-2 from-red-600 to-orange-500 bg-clip-text text-transparent">
+        <h3 className="text-[40px] text-center  font-extrabold w-full bg-gradient-to-r mx-auto lg:m-0 lg:col-span-2 from-red-600 to-orange-500 bg-clip-text text-transparent">
           {/* <img src="https://picsum.photos/200" alt="" /> */}
           HoatHinhOnline
-        </h1>
+        </h3>
         <div className="bg-[#2123249f] flex flex-col gap-5  rounded-lg p-6  lg:p-8">
           <ul className="flex flex-col text-sm text-white font-semibold gap-2">
             <li className="flex items-center cursor-pointer justify-center bg-[#2563eb] p-4 lg:px-16 rounded-lg  w-full gap-2">

@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image";
 import React from "react";
 import Showtime from "./Showtime";
@@ -10,9 +11,9 @@ export default function CardDescription() {
       <div
         className={`bg-[#0f171e] rounded-b-lg overflow-hidden relative  mb-4 pt-6 w-full`}
       >
-        <h1 className=" font-bold mx-3 bg-gradient-to-r border-b-[1px] border-gray-600 -mb-[2px] from-orange-500 to-red-600 bg-clip-text text-transparent">
+        <h3 className=" font-bold mx-3 bg-gradient-to-r border-b-[1px] border-gray-600 -mb-[2px] from-orange-500 to-red-600 bg-clip-text text-transparent">
           NỘI DUNG PHIM
-        </h1>
+        </h3>
         <div className="h-[3px] mb-2 mx-3 w-[140px]    bg-gradient-to-r from-orange-500 to-red-600 "></div>
         <h2 className=" px-3 text-sm font-bold lg:text-xl py-1 lg:py-2">
           Xem Phim {"Nhất Thế Chí Tôn"} {"Vietsub"} {2024}:

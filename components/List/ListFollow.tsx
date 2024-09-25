@@ -21,7 +21,7 @@ export default function ListFollow() {
         <li className="w-full group/item cursor-pointer relative h-[220px] lg:h-[250px] rounded-md overflow-hidden">
           <img
             className="w-full h-full hover:scale-110 hover:duration-300 translate duration-300 object-cover"
-            src="https://hoathinh3d.io/wp-content/uploads/2024/02/IMG_0349-300x450.jpeg"
+            src=""
             alt=""
           />
           <span className="absolute bg-gradient-to-t from-black  w-full bottom-0 p-2 left-0">
