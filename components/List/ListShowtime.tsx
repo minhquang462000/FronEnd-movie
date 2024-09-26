@@ -8,9 +8,9 @@ export default function ListShowtime(props: IAppProps) {
   return (
     <main className="w-full">
       <div className="border-b-[1px] lg:px-2 flex justify-between items-center pb-1 -mb-[1.55px]  border-gray-800">
-        <h1 className="text-ld font-bold bg-gradient-to-r   from-orange-500 to-red-600 bg-clip-text text-transparent">
+        <h4 className="text-ld font-bold bg-gradient-to-r   from-orange-500 to-red-600 bg-clip-text text-transparent">
           Thứ Hai
-        </h1>
+        </h4>
         <p className="text-xs flex  items-center gap-1 cursor-pointer hover:text-orange-400 font-thin italic">
           Xem thêm
           <MdArrowForwardIos size={10} />

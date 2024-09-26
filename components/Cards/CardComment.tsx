@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { BiSolidLike } from "react-icons/bi";
 import { IoIosTimer } from "react-icons/io";
@@ -9,12 +10,13 @@ import {
 export default function CardComment() {
   const [allComments, setAllComments] = React.useState<boolean>(false);
   return (
-    <td className="lg:flex gap-2">
+    <div className="lg:flex gap-2">
       <span className="flex gap-2 lg:my-5 lg:flex-col lg:w-[10%] lg:items-center items-end">
-        <img
+        <Image
           className="w-10 h-10 lg:w-16 lg:h-16 bg-gray-500 rounded-full object-cover"
           src=""
           alt=""
+          priority={true}
         />
         <p className="font-bold bg-gradient-to-r text-white px-3 w-[100px] lg:w-full py-[2px] truncate text-xs rounded-lg from-orange-500 to-red-600">
           ĐẾ VƯƠNG gfdgfdgf sdsadsdasdsa sfsf
@@ -69,6 +71,6 @@ export default function CardComment() {
           </span>
         </span>
       </div>
-    </td>
+    </div>
   );
 }

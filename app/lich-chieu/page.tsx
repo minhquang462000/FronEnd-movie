@@ -1,8 +1,6 @@
-"use client";
-import ChangePage from "@/components/ChangePage/ChangePage";
+
 import ListShowtime from "@/components/List/ListShowtime";
 import MainLayout from "@/layouts/main";
-import * as React from "react";
 
 export interface IAppProps { }
 

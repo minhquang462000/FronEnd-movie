@@ -12,6 +12,7 @@ export default function CardMain(props: ICardMainProps) {
         className="w-full h-full hover:scale-110 hover:duration-300 translate duration-300 object-cover"
         src={require("@/public/images/img_test/Nhat-The-Doc-Ton-300x449_1.png")}
         alt=""
+        priority={true}
       />
       <span className="absolute bg-gradient-to-t from-black  w-full bottom-0 p-2 left-0">
         <span className="pt-10"></span>

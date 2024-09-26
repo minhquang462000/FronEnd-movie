@@ -1,6 +1,7 @@
 import Image from "next/image";
 import * as React from "react";
 import { FaRegCalendarCheck, FaStar } from "react-icons/fa6";
+import Link from "next/link";
 
 export function CardItem() {
   return (
@@ -8,8 +9,9 @@ export function CardItem() {
       <div className="col-span-1 w-full md:w-[180px] m-auto md:h-[250px] lg:w-[230px] lg:h-[330px] border-[6px] overflow-hidden border-black h-[150px]">
         <Image
           className="w-full h-full object-cover"
-          src=""
+          src={require("@/public/images/img_test/Nhat-The-Doc-Ton-300x449_1.png")}
           alt=""
+          priority={true}
         />
       </div>
       <ul className="flex flex-col col-span-2 lg:col-span-3 py-4 w-full">
@@ -27,21 +29,23 @@ export function CardItem() {
           <p className="w-[150px] hidden lg:block font-bold">Thể Loại</p>
           <ul className="  flex flex-wrap lg:text-sm text-[12px] font-semibold gap-1">
             <li className="w-max px-1 text-center bg-[#333940]  py-[6px]  rounded-md">
-              CN Animation
+              <Link href={"/the-loai"}> CN Animation</Link>
             </li>
             <li className="w-max px-1 text-center bg-[#333940]  py-[6px]  rounded-md">
-              HH KungFu
+              <Link href={"/the-loai"}>   HH KungFu</Link>
             </li>
             <li className="w-max px-1 text-center bg-[#333940]  py-[6px]  rounded-md">
-              Huyền Huyễn
+              <Link href={"/the-loai"}> Huyền Huyễn</Link>
             </li>
           </ul>
         </li>
         <li className="py-4 lg:py-8 lg:flex  items-center gap-5 border-b-[1px]  border-gray-600 ">
           <p className="w-[150px] hidden lg:block font-bold">Tập Mới Nhất</p>
-          <p className=" text-sm   bg-gradient-to-r  w-max text-white rounded-md  from-[#52839e] px-2 py-[2px] to-blue-500 ">
-            Tập 8
-          </p>
+          <Link href={"/phim/ten-phim/tap-8"}>
+            <button className=" text-sm   bg-gradient-to-r  w-max text-white rounded-md  from-[#52839e] px-2 py-[2px] to-blue-500 ">
+              Tập 8
+            </button>
+          </Link>
         </li>
         <li className="py-4 lg:py-8 lg:flex  items-center gap-5 border-b-[1px]  border-gray-600 ">
           <p className="w-[150px] hidden lg:block font-bold">Thông Tin Khác</p>

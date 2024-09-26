@@ -8,17 +8,11 @@ import { IoBookmark, IoInformationCircleSharp } from "react-icons/io5";
 import imgLogoBg from "@/public/images/bg_logo.jpg";
 import imgLogoAvt from "@/public/images/avatrlogo.jpg";
 import { IoIosShareAlt, IoLogoFacebook } from "react-icons/io";
-import {
-  MdKeyboardDoubleArrowLeft,
-  MdKeyboardDoubleArrowRight,
-  MdRunningWithErrors,
-} from "react-icons/md";
 import CardVideo from "@/components/Cards/CardVideo";
-import CardError from "@/components/Cards/CardError";
-import { useState } from "react";
 import MainLayout from "@/layouts/main";
 import ListRelateMovie from "@/components/List/ListRelateMOvie";
 import DialogErrorConfirm from "@/components/DialogErrorConfirm";
+import Image from "next/image";
 export default function page() {
   return (
     <MainLayout>
@@ -89,15 +83,17 @@ export default function page() {
         <Showtime />
         <div className="lg:w-[400px] w-full mt-2  h-max m-auto relative">
           <div className="w-full h-full bg-gradient-to-b from-[#07090a]  absolute"></div>
-          <img
+          <Image
             className="w-full object-cover h-full "
-            src={imgLogoBg.src}
+            src={imgLogoBg}
+            priority={true}
             alt=""
           />
           <span className="flex w-full items-center gap-2 absolute top-0 left-0 p-2 text-white">
-            <img
-              src={imgLogoAvt.src}
+            <Image
+              src={imgLogoAvt}
               alt=""
+              priority={true}
               className="border-2 border-white"
             />
             <span>

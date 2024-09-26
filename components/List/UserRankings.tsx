@@ -23,6 +23,7 @@ export default function UserRankings(props: IAppProps) {
             <Image
               className="lg:w-[100px] lg:h-[100px] w-[45px] h-[45px]  rounded-full cursor-pointer"
               src=""
+              priority={true}
               alt=""
             />
             <span className="flex flex-col lg:gap-2 ">

@@ -1,4 +1,4 @@
-'use client';
+
 import * as React from "react";
 import imgBcg from "@/public/images/bxh.png";
 import imgBpntt from "@/public/images/bxh-pntt.png";
